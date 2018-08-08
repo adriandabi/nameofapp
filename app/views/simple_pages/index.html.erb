@@ -1,3 +1,8 @@
 <h1>welcome to bike Berlin</h1>
 <h2> Yoursource for used bikes in Berlin</h2>
 <%= image_tag('Spiral_sharingan.jpg', class: "img-responsive") %>
+<%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+  <%= form.label :q, 'Search for:' %>
+  <%= form.text_field :q, id: 'q', value: params[:q] %>
+  <%= form.submit 'Search' %>
+<% end %>

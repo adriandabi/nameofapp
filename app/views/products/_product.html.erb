@@ -3,7 +3,17 @@
     <div class="col-sm">
       <h1><%= link_to product.name, product %></h1>
       <p><%= product.description %></p>
-      <strong>$ <%= product.price %></strong>
+
     </div><!-- /col -->
   <% end %>
 </div>
+
+<div class="field">
+  <%= form.label :description %><br>
+  <%= form.text_area :description %>
+</div>
+
+<div class="actions">
+  <%= form.submit %>
+</div>
+<% end %>

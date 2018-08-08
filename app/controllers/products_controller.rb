@@ -4,8 +4,12 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.limit(3)
-    @test_variable = 42
+    if params[:q]
+      search_term = params[:q]
+    # return our filtered list here
+    else
+      @products = Product.all
+    end
   end
 
   # GET /products/1
