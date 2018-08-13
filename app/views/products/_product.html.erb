@@ -1,9 +1,5 @@
-<div class="row">
-  <% @products.each do |product| %>
-    <div class="col-sm">
+<div class="col-sm">
       <h1><%= link_to product.name, product %></h1>
       <p><%= product.description %></p>
-
-    </div><!-- /col -->
-  <% end %>
-</div>
+      <strong>$ <%= product.price %></strong>
+  </div><!-- /col -->
