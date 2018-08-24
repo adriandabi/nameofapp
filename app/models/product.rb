@@ -3,7 +3,7 @@ class Product < ApplicationRecord
    Product.where("name i like ?", "%#{search_term}%")
  end
   has_many :orders
-  has_many :comment
+  has_many :comments
   def highest_rating_comment
     comments.rating_desc.first
   end
