@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :users
   resources :products do
     resources :comments
   end
+  devise_for :users
+  resources :users
+
   resources :object_names
   resources :orders, only: [:index, :show, :create, :destroy]
   post 'simple_pages/thank_you'
