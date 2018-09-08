@@ -79,8 +79,8 @@ class ProductsController < ApplicationController
     end
 
     def show
-      @comments = @product.comments.order("created_at DESC")
-    end
+      @comments = @product.comments.order("created_at DESC").paginate(page: params[:page])
+    end 
 
     def create
       @product = Product.find(params[:product_id])
