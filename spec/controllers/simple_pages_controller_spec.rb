@@ -6,7 +6,6 @@ describe SimplePagesController, type: :controller do
       get :index
       expect(response).to be_ok
       expect(response).to render_template('index')
-      expect(response).to redirect_to(...)
     end
   end
 end

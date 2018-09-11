@@ -11,6 +11,7 @@ before do
 end
 
 it "returns the average rating of all comments" do
+  expect(product.average_rating).to eq 3
   expect (Product.new(description:'nice bike')).not_tp be_valid
 
 end
