@@ -9,6 +9,7 @@
   <strong>Last name:</strong>
   <%= @user.last_name %>
 </p>
+<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
